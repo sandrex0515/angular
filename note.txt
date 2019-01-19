@@ -1,0 +1,4 @@
+alter table owner to USERNAME // to allow permission to use table to user
+serial // primary key postgres;
+\d // to show relational table
+\c // 

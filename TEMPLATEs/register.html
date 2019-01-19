@@ -1,0 +1,37 @@
+<div>
+
+    <a href="#/login">Return</a>    
+    <h1>Register</h1>
+    Name:     &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  <input type="text" ng-model="register.name" placeholder="Enter Name" style="text-transform:capitalize"/><br><br/> 
+    UserID: &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" ng-model="register.userid" placeholder="Enter UserID"/><br/><br/>
+    Password:  &nbsp; <input type="password" ng-model="register.password" placeholder="Enter Password"/><br><br/>
+    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="register.email" placeholder="Enter Email"/><br><br/>
+    Address:  &nbsp;  &nbsp; <input type="text" ng-model="register.address" placeholder="Enter Address"/><br><br/>
+    Contact no.:<input type="number" ng-model="register.contact" placeholder="Enter Contact No."/><br><br/>
+    <input type="button" ng-click="save()" value="Register" style="background:inherit ">
+    <h1 style="background: lawngreen" >{{returnMsg.message}}</h1><br/>
+    <h1 style="background:lightcoral">{{returnMsg.message2}} </h1><br/>
+</div>
+<h1>Registered from database</h1>
+<table cellspacing="1" style="border: 1px solid black;">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Contact no.</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="(key, value) in usertbl track by $index">
+            <td> {{value.id}} </td>
+            <td> {{value.name}} </td>
+            <td> {{value.email}} </td>
+            <td> {{value.address}} </td>
+            <td> {{value.contact}} </td>
+        </tr>
+
+    </tbody>
+</table>
+
